@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="btn_laden">
    <property name="geometry">
     <rect>
      <x>615</x>
@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>Daten aus File laden</string>
    </property>
   </widget>
   <widget class="QPushButton" name="btn_exit2">
@@ -44,7 +44,7 @@
     <string>EXIT</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="btn_hin">
    <property name="geometry">
     <rect>
      <x>615</x>
@@ -54,18 +54,66 @@
     </rect>
    </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>Datensatz in Datei hinzufügen</string>
    </property>
   </widget>
-  <widget class="QTableView" name="tableView">
+  <widget class="QTableWidget" name="tbl_w">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>20</x>
      <y>20</y>
-     <width>581</width>
+     <width>571</width>
      <height>461</height>
     </rect>
    </property>
+   <column>
+    <property name="text">
+     <string>Vorname</string>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Nachname</string>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Alter</string>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Wohnort</string>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="textAlignment">
+     <set>AlignJustify|AlignVCenter</set>
+    </property>
+   </column>
   </widget>
  </widget>
  <resources/>
