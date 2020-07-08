@@ -15,6 +15,9 @@ public:
     explicit Liste(QWidget *parent = nullptr);
     ~Liste();
 
+private slots:
+    void on_btn_laden_clicked();
+
 private:
     Ui::Liste *ui;
 };
