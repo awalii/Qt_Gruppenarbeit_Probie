@@ -47,3 +47,8 @@ void Liste::on_btn_laden_clicked()
 
 
     }
+
+void Liste::on_btn_exit2_clicked()
+{
+    close();
+}
