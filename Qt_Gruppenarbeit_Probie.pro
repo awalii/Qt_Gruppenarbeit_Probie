@@ -19,13 +19,15 @@ SOURCES += \
     eingabe.cpp \
     liste.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    person.cpp
 
 HEADERS += \
     bla.h \
     eingabe.h \
     liste.h \
-    mainwindow.h
+    mainwindow.h \
+    person.h
 
 FORMS += \
     eingabe.ui \
