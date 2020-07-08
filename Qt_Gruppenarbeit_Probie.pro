@@ -19,14 +19,17 @@ SOURCES += \
     liste.cpp \
     main.cpp \
     mainwindow.cpp
+    \eingabe.cpp
 
 HEADERS += \
     liste.h \
-    mainwindow.h
+    mainwindow.h\
+    eingabe.h
 
 FORMS += \
     liste.ui \
-    mainwindow.ui
+    mainwindow.ui\
+    eingabe.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
