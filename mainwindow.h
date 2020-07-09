@@ -22,13 +22,14 @@ private slots:
 
     void on_btn_login_clicked();
 
-    void on_rd_btn_clicked();
-
     void on_rd_btn_clicked(bool checked);
+
+    void on_btn_reset_clicked();
 
 private:
     Ui::MainWindow *ui;
     QString Name = "test";
     QString Password = "123";
+    int egg=0;
 };
 #endif // MAINWINDOW_H
