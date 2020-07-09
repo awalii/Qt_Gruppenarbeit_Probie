@@ -240,6 +240,45 @@
     <string>Error</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="btn_loshenAll">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>240</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Alles Löschen</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_bearbeiten">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>190</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Bearbeiten</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_loshen">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>290</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Löschen</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

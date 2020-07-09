@@ -44,7 +44,6 @@ void Liste::on_btn_laden_clicked()
             {
                 setreihe();
             }
-            //text.remove(QRegExp(" "));
         }
         this->max=this->reihe/6;
         int tmp=0;
@@ -84,4 +83,9 @@ void Liste::on_btn_hin_clicked()
         this->ui->tbl_w->setItem(max,5, new QTableWidgetItem(newentry->getGeschlecht()));
         this->max+=1;
     }
+}
+
+void Liste::on_btn_loshenAll_clicked()
+{
+    this->ui->tbl_w->clear();
 }
