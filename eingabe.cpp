@@ -6,6 +6,8 @@ Eingabe::Eingabe(QWidget *parent) :
     ui(new Ui::Eingabe)
 {
     ui->setupUi(this);
+    this->ui->lbl_1->hide();                //lbl hide
+
 }
 
 Eingabe::Eingabe(QString p_Gruppe, QString p_VorName, QString p_NachName, QString p_Alter, QString p_Geschlecht, QString p_WohnOrt)
@@ -65,13 +67,55 @@ void Eingabe::setAll(QString p_Gruppe, QString p_VorName, QString p_NachName, QS
 
 void Eingabe::on_btn_speichern_clicked()
 {
-    this->Gruppe=this->ui->line_gname->text();
-    this->VorName=this->ui->line_vname->text();
-    this->NachName=this->ui->line_nname->text();
-    this->Alter=this->ui->line_alter->text();
-    this->WohnOrt=this->ui->line_wohn->text();
+
+    Gruppe = this->ui->line_gname->text();
+    VorName = this->ui->line_vname->text();
+    NachName = this->ui->line_nname->text();
+    Alter = this->ui->line_alter->text();
     if(this->ui->checkBox_m->isChecked())this->Geschlecht="Maenlich";
     else if(this->ui->checkBox_w->isChecked())this->Geschlecht="Weiblich";
+    WohnOrt = this->ui->line_wohn->text();
 
-    QDialog::accept();
+
+        if(Gruppe.length() > 0 && VorName.length() > 0 && NachName.length() > 0 && Alter.length() > 0 && Geschlecht != ""  && WohnOrt.length() > 0 )
+        {
+            this->accept();
+        }
+
+        else{
+
+            if(Gruppe.length() == 0 ){
+
+                //this->ui->lbl_1->setText("<font border='1px' color='#c8010b'>FehlerMeldung</font>");
+
+                this->ui->lbl_1->show();                //lbl Show
+
+            }
+            if(VorName.length() == 0 ){
+
+                this->ui->lbl_2->setText("FehlerMeldung");
+                this->ui->lbl_2->setStyleSheet("color: #c8010b ; border: 2px solid black ; font-style:bold");
+            }
+
+             if (NachName.length() == 0 ){
+                 this->ui->lbl_3->setText("FehlerMeldung");
+                 this->ui->lbl_3->setStyleSheet("color: #c8010b ; border: 1px solid black ; font-style:bold");
+             }
+             if (Alter.length() == 0 ){
+                 this->ui->lbl_4->setText("FehlerMeldung");
+                 this->ui->lbl_4->setStyleSheet("color: #c8010b ; border: 1px solid black ; font-style:bold");
+             }
+             if(Geschlecht == "" )
+
+             {
+                 this->ui->lbl_5->setText("FehlerMeldung");
+                 this->ui->lbl_5->setStyleSheet("color: #c8010b ; border: 1px solid black ; font-style:bold");
+             }
+
+             if (WohnOrt.length() == 0 ){
+                 this->ui->lbl_6->setText("FehlerMeldung");
+                 this->ui->lbl_6->setStyleSheet("color: #c8010b ; border: 1px solid black ; font-style:bold");
+              }
+        }
+
 }
