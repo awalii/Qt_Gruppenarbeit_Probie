@@ -6,8 +6,6 @@ Eingabe::Eingabe(QWidget *parent) :
     ui(new Ui::Eingabe)
 {
     ui->setupUi(this);
-    this->ui->lbl_1->hide();                //lbl hide
-
 }
 
 Eingabe::Eingabe(QString p_Gruppe, QString p_VorName, QString p_NachName, QString p_Alter, QString p_Geschlecht, QString p_WohnOrt)
@@ -86,9 +84,8 @@ void Eingabe::on_btn_speichern_clicked()
 
             if(Gruppe.length() == 0 ){
 
-                //this->ui->lbl_1->setText("<font border='1px' color='#c8010b'>FehlerMeldung</font>");
-
-                this->ui->lbl_1->show();                //lbl Show
+                this->ui->lbl_1->setText("FehlerMeldung");
+                this->ui->lbl_1->setStyleSheet("color: #c8010b ; border: 2px solid black ; font-style:bold");               //lbl Show
 
             }
             if(VorName.length() == 0 ){
@@ -99,23 +96,28 @@ void Eingabe::on_btn_speichern_clicked()
 
              if (NachName.length() == 0 ){
                  this->ui->lbl_3->setText("FehlerMeldung");
-                 this->ui->lbl_3->setStyleSheet("color: #c8010b ; border: 1px solid black ; font-style:bold");
+                 this->ui->lbl_3->setStyleSheet("color: #c8010b ; border: 2px solid black ; font-style:bold");
              }
              if (Alter.length() == 0 ){
                  this->ui->lbl_4->setText("FehlerMeldung");
-                 this->ui->lbl_4->setStyleSheet("color: #c8010b ; border: 1px solid black ; font-style:bold");
+                 this->ui->lbl_4->setStyleSheet("color: #c8010b ; border: 2px solid black ; font-style:bold");
              }
              if(Geschlecht == "" )
 
              {
                  this->ui->lbl_5->setText("FehlerMeldung");
-                 this->ui->lbl_5->setStyleSheet("color: #c8010b ; border: 1px solid black ; font-style:bold");
+                 this->ui->lbl_5->setStyleSheet("color: #c8010b ; border: 2px solid black ; font-style:bold");
              }
 
              if (WohnOrt.length() == 0 ){
                  this->ui->lbl_6->setText("FehlerMeldung");
-                 this->ui->lbl_6->setStyleSheet("color: #c8010b ; border: 1px solid black ; font-style:bold");
+                 this->ui->lbl_6->setStyleSheet("color: #c8010b ; border: 2px solid black ; font-style:bold");
               }
         }
 
+}
+
+void Eingabe::on_btn_beenden_clicked()
+{
+    close();
 }

@@ -40,6 +40,8 @@ public:
 private slots:
     void on_btn_speichern_clicked();
 
+    void on_btn_beenden_clicked();
+
 private:
     Ui::Eingabe *ui;
 
