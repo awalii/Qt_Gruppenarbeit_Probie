@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>icons8-abschalttaste-50.png</file>
+        <file>easter.webp</file>
     </qresource>
 </RCC>

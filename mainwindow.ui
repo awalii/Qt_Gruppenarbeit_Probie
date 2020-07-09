@@ -155,27 +155,11 @@
      </property>
     </widget>
    </widget>
-   <widget class="QLabel" name="lbl_easter">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>50</y>
-      <width>331</width>
-      <height>271</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>../../../Users/11083/Desktop/east.webp</pixmap>
-    </property>
-   </widget>
    <widget class="QPushButton" name="btn_reset">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>200</y>
+      <x>390</x>
+      <y>180</y>
       <width>80</width>
       <height>71</height>
      </rect>
@@ -216,6 +200,28 @@
     </property>
     <property name="text">
      <string>?</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_easter">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>351</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="Ressource.qrc">:/easter.webp</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>
