@@ -14,7 +14,7 @@ Liste::Liste(QWidget *parent) :
 {
     ui->setupUi(this);
     this->ui->tbl_w->setRowCount(10);
-    this->ui->tbl_w->setColumnCount(6);
+    this->ui->tbl_w->setColumnCount(5);
 
 }
 
@@ -39,8 +39,9 @@ void Liste::on_btn_laden_clicked()
         QString text=add.readAll();
         for(int i=0;i<text.size();i++)
         {
-            this->ui->tbl_w->setItem(0,row, new QTableWidgetItem(text.section(" ",row,row)));
-            if(text.at(i)==" ")row++;
+            this->ui->tbl_w->setItem(0,row, new QTableWidgetItem(text.section(",",row,row)));
+            if(text.at(i)==",")row++;
+            //text.remove(QRegExp(" "));
         }
     }
 }
@@ -50,7 +51,7 @@ void Liste::on_btn_exit2_clicked()
     close();
 }
 
-void Liste::on_btn_hin_clicked()
+/*void Liste::on_btn_hin_clicked()
 {
     Eingabe *newentry= new Eingabe();
     if(newentry->exec()==QDialog::Accepted)
@@ -63,4 +64,4 @@ void Liste::on_btn_hin_clicked()
         this->ui->tbl_w->setItem(reihe,4, new QTableWidgetItem(newentry->getWohnOrt()));
         this->ui->tbl_w->setItem(reihe,5, new QTableWidgetItem(newentry->getGeschlecht()));
     }
-}
+}*/

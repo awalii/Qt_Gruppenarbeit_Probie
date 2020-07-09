@@ -14,6 +14,7 @@ class Eingabe : public QDialog
 public:
     explicit Eingabe(QWidget *parent = nullptr);
 
+
     Eingabe(QString p_Gruppe,QString p_VorName, QString p_NachName, QString p_Alter,QString p_Geschlecht ,QString p_WohnOrt );
 
 
@@ -39,7 +40,7 @@ public:
 private:
     Ui::Eingabe *ui;
 
-    QString Gruppe ;
+    QString Gruppe;
     QString VorName;
     QString NachName;
     QString Alter;
