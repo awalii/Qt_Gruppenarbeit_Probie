@@ -62,3 +62,16 @@ void Eingabe::setAll(QString p_Gruppe, QString p_VorName, QString p_NachName, QS
     this->Geschlecht = p_Geschlecht;
     this->WohnOrt = p_WohnOrt;
 }
+
+void Eingabe::on_btn_speichern_clicked()
+{
+    this->Gruppe=this->ui->line_gname->text();
+    this->VorName=this->ui->line_vname->text();
+    this->NachName=this->ui->line_nname->text();
+    this->Alter=this->ui->line_alter->text();
+    this->WohnOrt=this->ui->line_wohn->text();
+    if(this->ui->checkBox_m->isChecked())this->Geschlecht="Maenlich";
+    else if(this->ui->checkBox_w->isChecked())this->Geschlecht="Weiblich";
+
+    QDialog::accept();
+}

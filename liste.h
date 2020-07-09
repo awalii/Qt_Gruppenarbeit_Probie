@@ -27,8 +27,15 @@ private slots:
 
 private:
     Ui::Liste *ui;
-    int reihe=1;
+    int reihe=0;
     class Person *Personen[10];
+    QString Gruppe;
+    QString VorName;
+    QString NachName;
+    QString Alter;
+    QString WohnOrt;
+    QString Geschlecht;
+    int max=0;
 };
 
 #endif // LISTE_H

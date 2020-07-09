@@ -7,7 +7,7 @@ class Person : public QDialog
 {
 public:
     Person();
-    Person(QString p_Gruppe,QString p_VorName, QString p_NachName, QString p_Alter,QString p_Geschlecht ,QString p_WohnOrt );
+    Person(QString p_Gruppe,QString p_VorName, QString p_NachName, QString p_Alter ,QString p_WohnOrt ,QString p_Geschlecht);
 
 
     ~Person();
@@ -21,7 +21,7 @@ public:
     QString getWohnOrt() const;
 
         //setter
-    void setAll(QString p_Gruppe,QString p_VorName, QString p_NachName, QString p_Alter,QString p_Geschlecht ,QString p_WohnOrt );       //für Alle ändern
+    void setAll(QString p_Gruppe,QString p_VorName, QString p_NachName, QString p_Alter ,QString p_WohnOrt,QString p_Geschlecht );       //für Alle ändern
     void setGruppe(const QString &p_Gruppe);
     void setVorName(const QString &p_VorName);
     void setNachName(const QString &p_NachName);

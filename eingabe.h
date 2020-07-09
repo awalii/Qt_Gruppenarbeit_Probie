@@ -37,6 +37,9 @@ public:
     void setWohnOrt(const QString &p_WohnOrt);
 
 
+private slots:
+    void on_btn_speichern_clicked();
+
 private:
     Ui::Eingabe *ui;
 
