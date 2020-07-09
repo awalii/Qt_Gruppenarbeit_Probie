@@ -4,7 +4,7 @@ Person::Person() :  QDialog()
 {
 
 }
-Person::Person(QString p_Gruppe, QString p_VorName, QString p_NachName, QString p_Alter, QString p_Geschlecht, QString p_WohnOrt) :  QDialog()
+Person::Person(QString p_Gruppe, QString p_VorName, QString p_NachName, QString p_Alter, QString p_WohnOrt, QString p_Geschlecht) :  QDialog()
 {
     this->Gruppe = p_Gruppe;
     this->VorName = p_VorName;
@@ -48,7 +48,7 @@ QString Person::getWohnOrt() const
     return WohnOrt;
 }
 
-void Person::setAll(QString p_Gruppe, QString p_VorName, QString p_NachName, QString p_Alter, QString p_Geschlecht, QString p_WohnOrt)     //Alle zusammen bearbeiten
+void Person::setAll(QString p_Gruppe, QString p_VorName, QString p_NachName, QString p_Alter, QString p_WohnOrt, QString p_Geschlecht)     //Alle zusammen bearbeiten
 {
     this->Gruppe = p_Gruppe;
     this->VorName = p_VorName;
