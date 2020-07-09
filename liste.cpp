@@ -87,5 +87,11 @@ void Liste::on_btn_hin_clicked()
 
 void Liste::on_btn_loshenAll_clicked()
 {
-    this->ui->tbl_w->clear();
+    this->ui->tbl_w->clearContents();
+    //this->ui->tbl_w->clear();
+}
+
+void Liste::on_btn_loshen_clicked()
+{
+    this->ui->tbl_w->currentItem()->setText("");
 }

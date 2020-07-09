@@ -27,6 +27,8 @@ private slots:
 
     void on_btn_loshenAll_clicked();
 
+    void on_btn_loshen_clicked();
+
 private:
     Ui::Liste *ui;
     int reihe=0;
