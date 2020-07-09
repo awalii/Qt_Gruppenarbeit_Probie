@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     this->ui->lbl_easter->hide();
     this->ui->btn_reset->hide();
     this->ui->lbl_combi->hide();
+    this->ui->pushButton->hide();
 }
 
 MainWindow::~MainWindow()
@@ -22,7 +23,7 @@ void MainWindow::on_btn_exit_clicked()
 {
     if(egg==2)
     {
-        this->ui->lbl_combi->hide();
+        this->ui->pushButton->hide();
         this->ui->lbl_easter->show();
         this->ui->btn_reset->show();
     }
@@ -68,13 +69,11 @@ void MainWindow::on_rd_btn_clicked(bool checked)
 
     if(checked == 1){
         this->ui->line_pass->setEchoMode(QLineEdit::Normal);
-        this->ui->lbl_combi->show();
-        this->ui->lbl_combi->setText("LEFT,RIGHT,MIDDLE");
+        this->ui->pushButton->show();
     }
     else{
         this->ui->line_pass->setEchoMode(QLineEdit::Password);
-        this->ui->lbl_combi->clear();
-        this->ui->lbl_combi->hide();
+        this->ui->pushButton->hide();
     }
 }
 
@@ -84,4 +83,15 @@ void MainWindow::on_btn_reset_clicked()
     this->ui->lbl_easter->hide();
     this->ui->btn_reset->hide();
     this->egg=0;
+}
+
+void MainWindow::on_pushButton_pressed()
+{
+    this->ui->lbl_combi->show();
+    this->ui->lbl_combi->setText("LEFT,RIGHT,MIDDLE");
+}
+
+void MainWindow::on_pushButton_released()
+{
+    this->ui->lbl_combi->hide();
 }
