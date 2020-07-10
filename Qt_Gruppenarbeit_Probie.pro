@@ -23,7 +23,6 @@ SOURCES += \
     person.cpp
 
 HEADERS += \
-    bla.h \
     eingabe.h \
     liste.h \
     mainwindow.h \
