@@ -31,6 +31,9 @@
   <property name="autoFillBackground">
    <bool>false</bool>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(163, 163, 163);</string>
+  </property>
   <property name="sizeGripEnabled">
    <bool>false</bool>
   </property>
@@ -51,6 +54,9 @@
      <pointsize>10</pointsize>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(2, 2, 2);</string>
+   </property>
    <property name="text">
     <string>Daten aus File laden</string>
    </property>
@@ -68,6 +74,9 @@
     <font>
      <pointsize>12</pointsize>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(2, 2, 2);</string>
    </property>
    <property name="text">
     <string>EXIT</string>
@@ -87,6 +96,9 @@
      <pointsize>10</pointsize>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(2, 2, 2);</string>
+   </property>
    <property name="text">
     <string>Datensatz in Datei hinzufügen</string>
    </property>
@@ -94,10 +106,10 @@
   <widget class="QTableWidget" name="tbl_w">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>30</x>
      <y>70</y>
-     <width>631</width>
-     <height>411</height>
+     <width>621</width>
+     <height>331</height>
     </rect>
    </property>
    <property name="tabletTracking">
@@ -112,11 +124,31 @@
    <property name="acceptDrops">
     <bool>false</bool>
    </property>
+   <property name="whatsThis">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
    <property name="autoFillBackground">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(2, 2, 2);
+background-color: rgb(51, 255, 242);
+gridline-color: rgb(6, 6, 6);</string>
+   </property>
    <property name="frameShape">
     <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="sizeAdjustPolicy">
+    <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
    </property>
    <property name="columnCount">
     <number>6</number>
@@ -131,6 +163,9 @@
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="textAlignment">
+     <set>AlignCenter</set>
     </property>
     <property name="background">
      <color>
@@ -154,6 +189,9 @@
       <strikeout>false</strikeout>
      </font>
     </property>
+    <property name="textAlignment">
+     <set>AlignCenter</set>
+    </property>
     <property name="background">
      <color>
       <red>255</red>
@@ -173,6 +211,9 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="textAlignment">
+     <set>AlignCenter</set>
+    </property>
     <property name="background">
      <color>
       <red>85</red>
@@ -191,6 +232,9 @@
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="textAlignment">
+     <set>AlignCenter</set>
     </property>
     <property name="background">
      <color>
@@ -212,7 +256,7 @@
      </font>
     </property>
     <property name="textAlignment">
-     <set>AlignJustify|AlignVCenter</set>
+     <set>AlignCenter</set>
     </property>
     <property name="background">
      <color>
@@ -232,6 +276,9 @@
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="textAlignment">
+     <set>AlignCenter</set>
     </property>
     <property name="background">
      <color>
@@ -257,7 +304,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Error</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="btn_loshenAll">
@@ -273,6 +320,9 @@
     <font>
      <pointsize>10</pointsize>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(2, 2, 2);</string>
    </property>
    <property name="text">
     <string>Alles Löschen</string>
@@ -292,6 +342,9 @@
      <pointsize>10</pointsize>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(2, 2, 2);</string>
+   </property>
    <property name="text">
     <string>Bearbeiten</string>
    </property>
@@ -309,6 +362,9 @@
     <font>
      <pointsize>10</pointsize>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(2, 2, 2);</string>
    </property>
    <property name="text">
     <string>Löschen</string>
