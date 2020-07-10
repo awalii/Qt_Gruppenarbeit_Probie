@@ -53,14 +53,21 @@ QString Eingabe::getWohnOrt() const
     return WohnOrt;
 }
 
-void Eingabe::setAll(QString p_Gruppe, QString p_VorName, QString p_NachName, QString p_Alter, QString p_Geschlecht, QString p_WohnOrt)     //Alle zusammen bearbeiten
+void Eingabe::setAll(QString p_Gruppe, QString p_VorName, QString p_NachName, QString p_Alter, QString p_WohnOrt, QString p_Geschlecht)     //Alle zusammen bearbeiten
 {
-    this->Gruppe = p_Gruppe;
+    /*this->Gruppe = p_Gruppe;
     this->VorName = p_VorName;
     this->NachName = p_NachName;
     this->Alter = p_Alter;
     this->Geschlecht = p_Geschlecht;
-    this->WohnOrt = p_WohnOrt;
+    this->WohnOrt = p_WohnOrt;*/
+    this->ui->line_gname->setText(p_Gruppe);
+    ui->line_vname->setText(p_VorName);
+    ui->line_nname->setText(p_NachName);
+    ui->line_alter->setText(p_Alter);
+    ui->line_wohn->setText(p_WohnOrt);
+    if(p_Geschlecht=="Maennlich")ui->checkBox_m->click();
+    else ui->checkBox_w->click();
 }
 
 void Eingabe::on_btn_speichern_clicked()
@@ -70,7 +77,7 @@ void Eingabe::on_btn_speichern_clicked()
     VorName = this->ui->line_vname->text();
     NachName = this->ui->line_nname->text();
     Alter = this->ui->line_alter->text();
-    if(this->ui->checkBox_m->isChecked())this->Geschlecht="Maenlich";
+    if(this->ui->checkBox_m->isChecked())this->Geschlecht="Maennlich";
     else if(this->ui->checkBox_w->isChecked())this->Geschlecht="Weiblich";
     WohnOrt = this->ui->line_wohn->text();
 

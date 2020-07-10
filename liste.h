@@ -29,6 +29,8 @@ private slots:
 
     void on_btn_loshen_clicked();
 
+    void on_btn_bearbeiten_clicked();
+
 private:
     Ui::Liste *ui;
     int reihe=0;
@@ -40,6 +42,7 @@ private:
     QString WohnOrt;
     QString Geschlecht;
     int max=0;
+    int currentline=0;
 };
 
 #endif // LISTE_H

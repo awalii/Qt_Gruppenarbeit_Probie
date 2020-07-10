@@ -15,7 +15,7 @@ public:
     explicit Eingabe(QWidget *parent = nullptr);
 
 
-    Eingabe(QString p_Gruppe,QString p_VorName, QString p_NachName, QString p_Alter,QString p_Geschlecht ,QString p_WohnOrt );
+    Eingabe(QString p_Gruppe,QString p_VorName, QString p_NachName, QString p_Alter,QString p_WohnOrt,QString p_Geschlecht  );
 
 
     ~Eingabe();

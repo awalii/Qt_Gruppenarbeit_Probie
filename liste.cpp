@@ -95,5 +95,28 @@ void Liste::on_btn_loshenAll_clicked()
 
 void Liste::on_btn_loshen_clicked()
 {
+    if(this->ui->tbl_w->currentRow())
     this->ui->tbl_w->currentItem()->setText("");
+}
+
+void Liste::on_btn_bearbeiten_clicked()
+{
+    currentline=this->ui->tbl_w->currentRow();
+    Eingabe *newentry= new Eingabe();
+    newentry->setAll(Personen[currentline]->getGruppe(),
+                     Personen[currentline]->getVorName(),
+                     Personen[currentline]->getNachName(),
+                     Personen[currentline]->getAlter(),
+                     Personen[currentline]->getWohnOrt(),
+                     Personen[currentline]->getGeschlecht());
+    if(newentry->exec()==QDialog::Accepted)
+    {
+        Personen[currentline]=new Person(newentry->getGruppe(),newentry->getVorName(),newentry->getNachName(),newentry->getAlter(),newentry->getWohnOrt(),newentry->getGeschlecht());
+        this->ui->tbl_w->setItem(currentline,0, new QTableWidgetItem(newentry->getGruppe()));
+        this->ui->tbl_w->setItem(currentline,1, new QTableWidgetItem(newentry->getVorName()));
+        this->ui->tbl_w->setItem(currentline,2, new QTableWidgetItem(newentry->getNachName()));
+        this->ui->tbl_w->setItem(currentline,3, new QTableWidgetItem(newentry->getAlter()));
+        this->ui->tbl_w->setItem(currentline,4, new QTableWidgetItem(newentry->getWohnOrt()));
+        this->ui->tbl_w->setItem(currentline,5, new QTableWidgetItem(newentry->getGeschlecht()));
+    }
 }
