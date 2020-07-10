@@ -39,7 +39,9 @@ void Liste::on_btn_laden_clicked()
         QString text=add.readAll();
         for(int i=0;i<text.size();i++)
         {
+            if(text.at(i)=='\n')text.remove(i,1);
             this->ui->tbl_w->setItem(0,reihe, new QTableWidgetItem(text.section(",",reihe,reihe)));
+
             if(text.at(i)==",")
             {
                 setreihe();
