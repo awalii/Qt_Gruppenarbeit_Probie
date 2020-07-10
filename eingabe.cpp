@@ -109,14 +109,14 @@ void Eingabe::on_btn_speichern_clicked()
                  this->ui->lbl_4->setText("FehlerMeldung");
                  this->ui->lbl_4->setStyleSheet("color: #c8010b ; border: 2px solid black ; font-style:bold");
              }
-             if(Geschlecht == "" )
+             if(WohnOrt.length() == 0 )
 
              {
                  this->ui->lbl_5->setText("FehlerMeldung");
                  this->ui->lbl_5->setStyleSheet("color: #c8010b ; border: 2px solid black ; font-style:bold");
              }
 
-             if (WohnOrt.length() == 0 ){
+             if (Geschlecht == "" ){
                  this->ui->lbl_6->setText("FehlerMeldung");
                  this->ui->lbl_6->setStyleSheet("color: #c8010b ; border: 2px solid black ; font-style:bold");
               }
